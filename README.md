@@ -66,6 +66,33 @@ npm pack cesium@1.119            # or: npm i cesium
 echo "NEXT_PUBLIC_CESIUM_BASE_URL=/cesium" >> .env.local
 ```
 
+## Deploy
+
+This is a standard Next.js app and deploys to [Vercel](https://vercel.com) with zero extra configuration (`vercel.json` pins the build to the `pdx1` / US‑West region for low latency to BC).
+
+**One‑click deploy** (clones the repo and walks you through the optional token):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsatishkumarkengam-cpu%2F3d-maps&env=NEXT_PUBLIC_CESIUM_ION_TOKEN&envDescription=Optional%20Cesium%20Ion%20token%20for%20photorealistic%20terrain%20%26%203D%20buildings&envLink=https%3A%2F%2Fcesium.com%2Fion%2Ftokens&project-name=metro-vancouver-3d-twin)
+
+> The one‑click button clones the repository's **default branch**. Until this work is merged to `main`, deploy the feature branch instead (below).
+
+**Deploy this branch directly (no merge required):**
+
+1. In the [Vercel dashboard](https://vercel.com/new) → **Add New → Project → Import** `satishkumarkengam-cpu/3d-maps`.
+2. Under **Settings → Git**, set the **Production Branch** to `claude/metro-vancouver-3d-twin-i8qqyc`.
+3. (Optional) Under **Settings → Environment Variables**, add `NEXT_PUBLIC_CESIUM_ION_TOKEN` for photorealistic terrain and 3D buildings.
+4. Deploy. Vercel auto‑detects Next.js — no build settings needed.
+
+Or from the CLI:
+
+```bash
+npm i -g vercel
+vercel            # first run links the project
+vercel --prod     # deploy to production
+```
+
+Any host that runs Next.js (Netlify, Render, a Node server via `npm run build && npm run start`) works the same way; only the env‑var UI differs.
+
 ## Project structure
 
 ```
