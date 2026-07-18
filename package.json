@@ -1,0 +1,25 @@
+{
+  "name": "metro-vancouver-3d-twin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive 3D digital twin of the Metro Vancouver region and Fraser Valley.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zustand": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.5.3"
+  }
+}
